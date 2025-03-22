@@ -9,8 +9,8 @@ nombre VARCHAR(50) NOT NULL, -- Nombre del cliente
 apellido VARCHAR(50) NOT NULL, -- Apellido del cliente
 email VARCHAR(100) UNIQUE NOT NULL, -- Correo electrónico del cliente
 telefono VARCHAR(15), -- Número de teléfono del cliente
-tipo_cliente ENUM('individual', 'empresa') -- Tipo de cliente
-
+tipo_cliente ENUM('individual', 'empresa') NOT NULL DEFAULT 'individual' -- Tipo de cliente
+);
 
 -- Creación de planes
 CREATE TABLE Planes (
